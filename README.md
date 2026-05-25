@@ -1,22 +1,22 @@
-![GitHub License](https://img.shields.io/github/license/GloryWong/iso-timestamp)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/GloryWong/iso-timestamp)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/GloryWong/iso-timestamp/release.yml)
-![GitHub Release](https://img.shields.io/github/v/release/GloryWong/iso-timestamp)
-![GitHub Release Date](https://img.shields.io/github/release-date/GloryWong/iso-timestamp)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/GloryWong/iso-timestamp)
-![GitHub watchers](https://img.shields.io/github/watchers/GloryWong/iso-timestamp)
-![GitHub forks](https://img.shields.io/github/forks/GloryWong/iso-timestamp)
-![GitHub Repo stars](https://img.shields.io/github/stars/GloryWong/iso-timestamp)
+<h1 align="center">Welcome to iso-timestamp 👋</h1>
+
+![GitHub License](https://img.shields.io/github/license/robertwang1001/iso-timestamp)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/robertwang1001/iso-timestamp)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/robertwang1001/iso-timestamp/release.yaml)
+![GitHub Release](https://img.shields.io/github/v/release/robertwang1001/iso-timestamp)
+![GitHub Release Date](https://img.shields.io/github/release-date/robertwang1001/iso-timestamp)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/robertwang1001/iso-timestamp)
+![GitHub watchers](https://img.shields.io/github/watchers/robertwang1001/iso-timestamp)
+![GitHub forks](https://img.shields.io/github/forks/robertwang1001/iso-timestamp)
+![GitHub Repo stars](https://img.shields.io/github/stars/robertwang1001/iso-timestamp)
 ![NPM Version](https://img.shields.io/npm/v/iso-timestamp)
 ![NPM Type Definitions](https://img.shields.io/npm/types/iso-timestamp)
 ![NPM Downloads](https://img.shields.io/npm/dw/iso-timestamp)
 ![Node Current](https://img.shields.io/node/v/iso-timestamp)
 
-# iso-timestamp
-
 Generate ISO 8601 timestamp: YYYYMMDDhhmmssSSS
 
-### Install
+## Install
 
 ```bash
 npm install iso-timestamp
@@ -34,9 +34,9 @@ or
 pnpm add iso-timestamp
 ```
 
-### API
+## API
 
-#### `timestamp(options?)` or `timestamp(date, options?)`
+### `timestamp(options?)` or `timestamp(date, options?)`
 
   * `date`: Custom date
 
@@ -65,13 +65,13 @@ timestamp({ separator: '-', excludeTime: true })
 // return timestamp with custom separator: 2024-08-07
 ```
 
-## Authors
+## Contributing
 
-👤 **GloryWong**
-
-* Website: https://glorywong.com
-* GitHub: [@GloryWong](https://github.com/GloryWong)
-
-## Show Your Support
+Contributions are welcome! If you have ideas, bug fixes, or improvements, please open an issue or submit a pull request on the
+[GitHub repository](https://github.com/robertwang1001/iso-timestamp).
 
 Give a ⭐️ if this project helped you!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.

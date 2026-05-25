@@ -3,41 +3,41 @@ name: release-please
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v5
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
-          version: 9.15.9
           run_install: false
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 18.20.8
+          node-version: 24.15.0
           registry-url: 'https://registry.npmjs.org'
           cache: pnpm
         if: ${{ steps.release.outputs.release_created }}
@@ -47,8 +47,5 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Publish to NPM
-        # The --no-git-checks flag is needed to bypass an issue with pnpm related to GitHub's detached HEAD state during releases.
-        run: pnpm publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
         if: ${{ steps.release.outputs.release_created }}

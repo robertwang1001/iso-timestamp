@@ -2,16 +2,16 @@
   "name": "iso-timestamp",
   "type": "module",
   "version": "1.2.0",
+  "packageManager": "pnpm@11.3.0+sha512.2c403d6594527287672b1f7056343a1f7c3634036a67ffabfcc2b3d7595d843768f8787148d1b57cf7956c90606bbd192857c363af19e96d2d0ec9ec5741d215",
   "description": "Generate ISO 8601 timestamp: YYYYMMDDhhmmssSSS",
   "author": {
-    "name": "Glory Wong",
-    "email": "glorywong1001@gmail.com",
-    "url": "https://glorywong.com"
+    "name": "Robert Wang",
+    "email": "glorywong1001@gmail.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/GloryWong/iso-timestamp#readme",
-  "repository": "github:GloryWong/iso-timestamp",
-  "bugs": "https://github.com/GloryWong/iso-timestamp/issues",
+  "homepage": "https://github.com/robertwang1001/iso-timestamp#readme",
+  "repository": "github:robertwang1001/iso-timestamp",
+  "bugs": "https://github.com/robertwang1001/iso-timestamp/issues",
   "keywords": [
     "timestamp",
     "datetime",
@@ -33,7 +33,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=24"
   },
   "scripts": {
     "build": "tsc",
@@ -41,22 +41,22 @@
     "prepare": "pnpm simple-git-hooks",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
-    "test": "vitest",
+    "test": "vitest run",
     "coverage": "vitest run --coverage.enabled"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.19.0",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@tsconfig/node18": "^18.2.6",
-    "@types/node": "18.19.130",
-    "@vitest/coverage-istanbul": "^3.2.4",
-    "eslint": "^9.39.4",
-    "lint-staged": "^15.5.2",
+    "@antfu/eslint-config": "^9.0.0",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/node": "^24.12.4",
+    "@vitest/coverage-istanbul": "^4.1.7",
+    "eslint": "^10.4.0",
+    "lint-staged": "^17.0.5",
     "simple-git-hooks": "^2.13.1",
-    "type-fest": "^4.41.0",
-    "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "type-fest": "^5.6.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
   },
   "simple-git-hooks": {
     "commit-msg": "pnpm commitlint --edit ${1}",
@@ -64,5 +64,10 @@
   },
   "lint-staged": {
     "*": "pnpm lint:fix"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
