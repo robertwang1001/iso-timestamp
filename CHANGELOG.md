@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/robertwang1001/iso-timestamp/compare/v1.2.0...v2.0.0) (2026-05-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* require node 24
+
+### Miscellaneous Chores
+
+* require node 24 ([f2e2e01](https://github.com/robertwang1001/iso-timestamp/commit/f2e2e012a2329d34293f00db127cc804176401bf))
+
 ## [1.2.0](https://github.com/GloryWong/iso-timestamp/compare/v1.1.0...v1.2.0) (2024-08-26)
 
 
